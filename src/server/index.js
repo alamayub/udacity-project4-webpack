@@ -8,7 +8,7 @@ const cors = require("cors");
 const app = express();
 
 app.use(cors());
-app.use(express.static(path.join(__dirname, "../dist")));
+app.use(express.static(path.join("dist")));
 
 const textapi = new aylien({
   application_id: process.env.API_ID,
