@@ -19,19 +19,19 @@ function handleSubmit(event) {
   })
   .then(res => res.json())
   .then(res => {
-      const { text = "", language = "", categories = [] } = res.response;
-      categories.forEach((category, index) => {
-        document.getElementById("confidence").innerHTML = `<span>Confidence</span>: - ${category.confidence}`;
-        document.getElementById("subject").innerHTML = `<span>Subjectivity</span>: - ${category.label}`;
-        document.getElementById("code").innerHTML = `<span>Code</span>: - ${category.code}`;
-      });
+    const { text = "", language = "", categories = [] } = res.response;
+    categories.forEach((category, index) => {
+      document.getElementById("confidence").innerHTML = `<span>Confidence</span>: - ${category.confidence}`;
+      document.getElementById("subject").innerHTML = `<span>Subjectivity</span>: - ${category.label}`;
+      document.getElementById("code").innerHTML = `<span>Code</span>: - ${category.code}`;
+    });
 
-      document.getElementById("lang").innerHTML = `<span>Language</span>: - ${language}`;
-      document.getElementById("text").innerHTML = `<span>News</span>: - ${text}`;
+    document.getElementById("lang").innerHTML = `<span>Language</span>: - ${language}`;
+    document.getElementById("text").innerHTML = `<span>News</span>: - ${text}`;
 
-      return res;
-    })
-    .catch(error => snackbar(error.message ? error.message : "Error!"));
+    return res;
+  })
+  .catch(error => snackbar(error.message ? error.message : "Error!"));
 }
 
 export { handleSubmit };
