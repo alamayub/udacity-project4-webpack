@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Project 4 -Webpack</title>
+    </head>
+
+    <body>
+
+        <header>
+            <h1>news - n.l.p. webpack</h1>
+        </header>
+
+        <main>
+            <section>
+                <form class="" onsubmit="return Client.handleSubmit(event)">
+                    <input id="url" type="text" name="input" placeholder="Enter your favorite news url...">
+                    <input type="submit" name="" value="Submit" >
+                </form>
+            <section>
+
+            <section class="data">
+                <div class="head">Data Results</div>
+                <div class="results" id="results">
+                    <p id="confidence"></p><br>
+                    <p id="subject"></p><br>
+                    <p id="code"></p><br>
+                    <p id="lang"></p><br>
+                    <p id="text"></p><br>
+                </div>
+            </section>
+
+            <section>
+                <div id="snackbar"></div>
+            </section>
+        </main>
+
+        <footer>
+            <p>@2020 </p>
+            <p>News - N. L. P.</p>
+        </footer>
+
+        <script>
+            // Check that service workers are supported
+            if ('serviceWorker' in navigator) {
+                // Use the window load event to keep the page load performant
+                window.addEventListener('load', () => {
+                    navigator.serviceWorker.register('/service-worker.js');
+                });
+            }
+        </script>
+
+    </body>
+</html>

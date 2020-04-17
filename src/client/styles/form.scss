@@ -1,0 +1,38 @@
+form {
+    border-radius: 3px;
+    padding: 40px;
+    box-shadow: 0 0 40px 0 rgba($color: antiquewhite, $alpha: 1.0);
+    display: flex;
+    flex-direction: column;
+    input {
+        
+        padding: 20px;
+        font-size: 20px;
+        outline: none;
+        border: 2px solid antiquewhite;
+        box-shadow: 0 0 20px 0 rgba($color: antiquewhite, $alpha: 1.0);
+        border-radius: 40px;
+        letter-spacing: 1.2px;
+    }
+    input[type=submit] {
+        margin-top: 20px;
+        text-transform: uppercase;
+        outline: none;
+        border: 2px solid inherit;
+        background-color: antiquewhite;
+        cursor: pointer;
+    }
+    input[type=submit]:hover {
+        background-color: rgba($color: #f4d4aa, $alpha: .8);
+        color: teal;
+    }
+}
+@media(max-width: 800px) {
+    form {
+        padding: 20px;
+        input {
+            padding: 15px;
+            font-size: 17px;
+        }
+    }
+}
